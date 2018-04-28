@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0E0E0"
+    android:padding="16dp">
+
+    <RadioGroup
+        android:id="@+id/dashboard_radiogroup_seatclass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/dashboard_radio_coachclass"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:button="@null"
+            android:background="@drawable/radio_button_background"
+            android:checked="true"
+            android:text="COACH-CLASS"/>
+        <RadioButton
+            android:id="@+id/dashboard_radio_firstclass"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:button="@null"
+            android:background="@drawable/radio_button_background"
+            android:text="FIRST-CLASS"/>
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/dashboard_radiogroup_triptype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_radiogroup_seatclass"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/dashboard_radio_roundtrip"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:button="@null"
+            android:background="@drawable/radio_button_background"
+            android:checked="true"
+            android:text="ROUND-TRIP"/>
+        <RadioButton
+            android:id="@+id/dashboard_radio_onewaytrip"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:button="@null"
+            android:background="@drawable/radio_button_background"
+            android:text="ONE-WAY"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/dashboard_airport_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_radiogroup_triptype">
+
+        <EditText
+            android:id="@+id/dashboard_search_dep_airport"
+            android:background="#fff"
+            android:gravity="center"
+            android:textColor="#000"
+            android:text="BOS"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="100dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.034"
+            android:layout_height="100dp" />
+
+        <EditText
+            android:id="@+id/dashboard_search_arr_airport"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="#fff"
+            android:gravity="center"
+            android:textColor="#000"
+            android:text="SFO"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="100dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_date_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_airport_layout">
+
+        <EditText
+            android:id="@+id/dashboard_search_dep_date"
+            android:background="#fff"
+            android:gravity="center"
+            android:textColor="#000"
+            android:paddingLeft="4dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="05/15/2018"
+            android:clickable="true"
+            android:focusable="false"
+            android:inputType="date"
+            android:imeOptions="actionDone"
+            android:layout_height="60dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.034"
+            android:layout_height="60dp" />
+
+        <EditText
+            android:id="@+id/dashboard_search_arr_date"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="#fff"
+            android:gravity="center"
+            android:textColor="#000"
+            android:padding="4dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="05/16/2018"
+            android:clickable="true"
+            android:inputType="date"
+            android:focusable="false"
+            android:imeOptions="actionDone"
+            android:layout_height="60dp" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/dashboard_radiogroup_stopovers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_date_layout"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/dashboard_radio_nostopover"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:button="@null"
+            android:background="@drawable/radio_button_background"
+            android:checked="true"
+            android:text="NO-STOPOVER"/>
+        <RadioButton
+            android:id="@+id/dashboard_radio_onestopover"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:button="@null"
+            android:background="@drawable/radio_button_background"
+            android:padding="4dp"
+            android:text="ONE-STOPOVER"/>
+        <RadioButton
+            android:id="@+id/dashboard_radio_twostopover"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:button="@null"
+            android:background="@drawable/radio_button_background"
+            android:padding="4dp"
+            android:text="TWO-STOPOVER"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/dashboard_search_num"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_radiogroup_stopovers"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:hint="Number of Ticket"
+        android:imeOptions="actionDone"
+        android:text="1"
+        android:inputType="number"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/dashboard_button_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        android:background="#E65100"
+        android:textColor="#FAFAFA"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Search" />
+
+
+</android.support.constraint.ConstraintLayout>

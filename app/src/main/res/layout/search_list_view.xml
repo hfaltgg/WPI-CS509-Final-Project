@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:layout_margin="8dp"
+    android:padding="4dp"
+    android:background="#fff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/search_list_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.47"/>
+
+    <ImageView
+        android:id="@+id/search_list_guidearrow"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:src="@drawable/ic_trending_flat_black_24dp"
+        app:layout_constraintRight_toLeftOf="@+id/search_list_guideline"/>
+
+    <TextView
+        android:id="@+id/item_dep_airport"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#000"
+        app:layout_constraintRight_toLeftOf="@+id/search_list_guidearrow"/>
+
+    <TextView
+        android:id="@+id/item_arr_airport"
+        app:layout_constraintLeft_toRightOf="@+id/search_list_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/item_dep_date"
+        app:layout_constraintTop_toBottomOf="@+id/item_dep_airport"
+        app:layout_constraintRight_toRightOf="@+id/item_dep_airport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/item_arr_date"
+        app:layout_constraintTop_toBottomOf="@+id/item_arr_airport"
+        app:layout_constraintLeft_toLeftOf="@+id/item_arr_airport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/item_flight_time"
+        app:layout_constraintTop_toBottomOf="@+id/item_dep_airport"
+        app:layout_constraintRight_toLeftOf="@+id/item_arr_date"
+        app:layout_constraintLeft_toRightOf="@+id/item_dep_date"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/item_price"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingEnd="8dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+</android.support.constraint.ConstraintLayout>
